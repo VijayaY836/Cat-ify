@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Cat-ify: Random Cat Image Replacer",
+  "version": "1.0.0",
+  "description": "Replaces every image on the current webpage with a random cat photo fetched live from the cataas.com API.",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cat-ify"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
